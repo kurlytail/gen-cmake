@@ -1,0 +1,17 @@
+{
+  "name": "login",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "dependencies": {
+    "lodash": "",
+    "mkdirp": "",
+    "fs": "",
+    "debug": "",
+    "@kurlytail/gen-lib": "",
+    "@kurlytail/gen-sgen": ""
+  },
+  "scripts": {
+    "start": "node generate.js"
+  }
+}
