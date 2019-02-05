@@ -1,4 +1,15 @@
 {
+<%
+    _.each(design.Flow, (flow, key) => {
+        const dirName = lodash.kebabCase(flow.name);
+%>
+    "src/main/cc/<%=dirName%>/CMakeLists.txt" : {
+        "template": "src/main/cc/SUBDIRECTORY/CMakeLists.txt._",
+        "context" : "<%=dirName%>"
+    },
+<%
+    });
+%>
     "CMakeLists.txt" : {
         "template" : "CMakeLists.txt._"
     }

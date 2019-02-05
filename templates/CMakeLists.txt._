@@ -1,1 +1,18 @@
 cmake_minimum_required(VERSION <%=extension('cmake-minimum-required-version-.*')[0]%>)
+
+enable_testing()
+
+project(<%=design.MasterDesign[0].name%>)
+
+<%extension('cmake-message-.*').forEach(message => {%>
+<%=message%>
+<%});%>
+
+<%
+_.each(design.Flow, (flow, key) => {
+    const dirName = lodash.kebabCase(flow.name);
+%>
+add_subdirectory(src/main/cc/<%=dirName%>)
+<%
+});
+%>

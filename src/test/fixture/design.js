@@ -1,96 +1,192 @@
 {
-  "_ODsP4AviEemswplt4kY5KA": {
-    "clazz": "Tube",
-    "name": "cella_cellb",
-    "descriptor": [],
-    "from": "_BFc30AviEemswplt4kY5KA",
-    "to": "_MiaqYAviEemswplt4kY5KA"
-  },
-  "_8sJVQgvhEemswplt4kY5KA": {
-    "clazz": "MasterDesign",
-    "name": "fixture",
-    "cell": [
-      "master_cell_cella",
-      "master_cell_cellb"
-    ],
-    "tube": [
-      "master_tube_cella_cellb"
-    ]
-  },
-  "master_tube_cella_cellb": {
-    "clazz": "MasterTube",
-    "internalName": "master_tube_cella_cellb",
-    "name": "cella_cellb",
-    "designTubes": [
-      "_ODsP4AviEemswplt4kY5KA"
-    ],
-    "from": "master_cell_cella",
-    "to": "master_cell_cellb"
-  },
-  "master_cell_cella": {
-    "clazz": "MasterCell",
-    "count": 1,
-    "external": false,
-    "internalName": "master_cell_cella",
-    "name": "cella",
-    "pinned": false,
-    "input": [],
-    "output": [
-      "master_tube_cella_cellb"
-    ],
-    "designCells": [
-      "_BFc30AviEemswplt4kY5KA"
-    ]
-  },
-  "_MiaqYAviEemswplt4kY5KA": {
+  "_613t0CNTEemTP8T3D6r46A": {
     "clazz": "Cell",
     "count": 1,
     "external": false,
-    "name": "cellb",
+    "name": "screen3",
     "input": [
-      "_ODsP4AviEemswplt4kY5KA"
+      "_9vtBsCNTEemTP8T3D6r46A"
     ],
     "output": []
   },
-  "_8pBv0AvhEemswplt4kY5KA": {
+  "_kG8ZQCMbEem9Spia6ZkN0Q": {
     "clazz": "Layer",
     "name": "swarm",
     "constraint": []
   },
-  "master_cell_cellb": {
-    "clazz": "MasterCell",
-    "count": 1,
-    "external": false,
-    "internalName": "master_cell_cellb",
-    "name": "cellb",
-    "pinned": false,
-    "input": [
-      "master_tube_cella_cellb"
-    ],
-    "output": [],
-    "designCells": [
-      "_MiaqYAviEemswplt4kY5KA"
-    ]
-  },
-  "_AhnK8AviEemswplt4kY5KA": {
-    "clazz": "Flow",
-    "name": "default",
+  "_kiBywCMbEem9Spia6ZkN0Q": {
+    "clazz": "MasterDesign",
+    "name": "nav",
     "cell": [
-      "_BFc30AviEemswplt4kY5KA",
-      "_MiaqYAviEemswplt4kY5KA"
+      "master_cell_main",
+      "master_cell_screen1",
+      "master_cell_screen2",
+      "master_cell_screen3"
     ],
     "tube": [
-      "_ODsP4AviEemswplt4kY5KA"
+      "master_tube_link1",
+      "master_tube_link2",
+      "master_tube_link3"
     ]
   },
-  "_BFc30AviEemswplt4kY5KA": {
+  "_7utaUCNTEemTP8T3D6r46A": {
+    "clazz": "Tube",
+    "name": "link1",
+    "descriptor": [],
+    "from": "_4_bJkCNTEemTP8T3D6r46A",
+    "to": "_5dTYYCNTEemTP8T3D6r46A"
+  },
+  "_5dTYYCNTEemTP8T3D6r46A": {
     "clazz": "Cell",
     "count": 1,
     "external": false,
-    "name": "cella",
+    "name": "screen1",
+    "input": [
+      "_7utaUCNTEemTP8T3D6r46A"
+    ],
+    "output": []
+  },
+  "_9vtBsCNTEemTP8T3D6r46A": {
+    "clazz": "Tube",
+    "name": "link3",
+    "descriptor": [],
+    "from": "_4_bJkCNTEemTP8T3D6r46A",
+    "to": "_613t0CNTEemTP8T3D6r46A"
+  },
+  "_m-P9kCMbEem9Spia6ZkN0Q": {
+    "clazz": "Flow",
+    "name": "MainNavigation",
+    "cell": [
+      "_4_bJkCNTEemTP8T3D6r46A",
+      "_5dTYYCNTEemTP8T3D6r46A",
+      "_6UW8MCNTEemTP8T3D6r46A",
+      "_613t0CNTEemTP8T3D6r46A"
+    ],
+    "tube": [
+      "_7utaUCNTEemTP8T3D6r46A",
+      "_8W6CwCNTEemTP8T3D6r46A",
+      "_9vtBsCNTEemTP8T3D6r46A"
+    ]
+  },
+  "master_cell_main": {
+    "clazz": "MasterCell",
+    "count": 1,
+    "external": false,
+    "internalName": "master_cell_main",
+    "name": "main",
+    "pinned": false,
     "input": [],
     "output": [
-      "_ODsP4AviEemswplt4kY5KA"
+      "master_tube_link1",
+      "master_tube_link2",
+      "master_tube_link3"
+    ],
+    "designCells": [
+      "_4_bJkCNTEemTP8T3D6r46A"
     ]
+  },
+  "_4_bJkCNTEemTP8T3D6r46A": {
+    "clazz": "Cell",
+    "count": 1,
+    "external": false,
+    "name": "main",
+    "input": [],
+    "output": [
+      "_7utaUCNTEemTP8T3D6r46A",
+      "_8W6CwCNTEemTP8T3D6r46A",
+      "_9vtBsCNTEemTP8T3D6r46A"
+    ]
+  },
+  "master_cell_screen3": {
+    "clazz": "MasterCell",
+    "count": 1,
+    "external": false,
+    "internalName": "master_cell_screen3",
+    "name": "screen3",
+    "pinned": false,
+    "input": [
+      "master_tube_link3"
+    ],
+    "output": [],
+    "designCells": [
+      "_613t0CNTEemTP8T3D6r46A"
+    ]
+  },
+  "master_tube_link2": {
+    "clazz": "MasterTube",
+    "internalName": "master_tube_link2",
+    "name": "link2",
+    "designTubes": [
+      "_8W6CwCNTEemTP8T3D6r46A"
+    ],
+    "from": "master_cell_main",
+    "to": "master_cell_screen2"
+  },
+  "master_cell_screen2": {
+    "clazz": "MasterCell",
+    "count": 1,
+    "external": false,
+    "internalName": "master_cell_screen2",
+    "name": "screen2",
+    "pinned": false,
+    "input": [
+      "master_tube_link2"
+    ],
+    "output": [],
+    "designCells": [
+      "_6UW8MCNTEemTP8T3D6r46A"
+    ]
+  },
+  "master_tube_link3": {
+    "clazz": "MasterTube",
+    "internalName": "master_tube_link3",
+    "name": "link3",
+    "designTubes": [
+      "_9vtBsCNTEemTP8T3D6r46A"
+    ],
+    "from": "master_cell_main",
+    "to": "master_cell_screen3"
+  },
+  "master_cell_screen1": {
+    "clazz": "MasterCell",
+    "count": 1,
+    "external": false,
+    "internalName": "master_cell_screen1",
+    "name": "screen1",
+    "pinned": false,
+    "input": [
+      "master_tube_link1"
+    ],
+    "output": [],
+    "designCells": [
+      "_5dTYYCNTEemTP8T3D6r46A"
+    ]
+  },
+  "master_tube_link1": {
+    "clazz": "MasterTube",
+    "internalName": "master_tube_link1",
+    "name": "link1",
+    "designTubes": [
+      "_7utaUCNTEemTP8T3D6r46A"
+    ],
+    "from": "master_cell_main",
+    "to": "master_cell_screen1"
+  },
+  "_6UW8MCNTEemTP8T3D6r46A": {
+    "clazz": "Cell",
+    "count": 1,
+    "external": false,
+    "name": "screen2",
+    "input": [
+      "_8W6CwCNTEemTP8T3D6r46A"
+    ],
+    "output": []
+  },
+  "_8W6CwCNTEemTP8T3D6r46A": {
+    "clazz": "Tube",
+    "name": "link2",
+    "descriptor": [],
+    "from": "_4_bJkCNTEemTP8T3D6r46A",
+    "to": "_6UW8MCNTEemTP8T3D6r46A"
   }
 }
