@@ -1,3 +1,0 @@
-<%
-const cell = _.find(design.MasterCell, cell => cell.name === context);
-%>

@@ -7,13 +7,3 @@ project(<%=design.MasterDesign[0].name%>)
 <%extension('cmake-message-.*').forEach(message => {%>
 <%=message%>
 <%});%>
-
-<%
-_.each(design.MasterCell, (cell, key) => {
-    if (cell.external) return;
-    const dirName = lodash.kebabCase(cell.name);
-%>
-add_subdirectory(src/main/cc/<%=dirName%>)
-<%
-});
-%>

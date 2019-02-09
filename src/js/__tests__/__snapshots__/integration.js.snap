@@ -2,10 +2,6 @@
 
 exports[`# integration test ## should generate design 1`] = `
 "info: Initializing git repository testoutput/.git
-info: Generated testoutput/src/main/cc/main/CMakeLists.txt from template templates/src/main/cc/SUBDIRECTORY/CMakeLists.txt._
-info: Generated testoutput/src/main/cc/screen-3/CMakeLists.txt from template templates/src/main/cc/SUBDIRECTORY/CMakeLists.txt._
-info: Generated testoutput/src/main/cc/screen-2/CMakeLists.txt from template templates/src/main/cc/SUBDIRECTORY/CMakeLists.txt._
-info: Generated testoutput/src/main/cc/screen-1/CMakeLists.txt from template templates/src/main/cc/SUBDIRECTORY/CMakeLists.txt._
 info: loading extension ./scripts/../templates/extensions/cmake-minimum-required-version-default._
 info: loading extension ./scripts/../templates/extensions/cmake-message-versions._
 info: loading extension ./scripts/../templates/extensions/cmake-message-processor._
@@ -21,10 +17,6 @@ info: sgen is done
 
 exports[`# integration test ## should generate design and run cmake commands 1`] = `
 "info: Initializing git repository testoutput/.git
-info: Generated testoutput/src/main/cc/main/CMakeLists.txt from template templates/src/main/cc/SUBDIRECTORY/CMakeLists.txt._
-info: Generated testoutput/src/main/cc/screen-3/CMakeLists.txt from template templates/src/main/cc/SUBDIRECTORY/CMakeLists.txt._
-info: Generated testoutput/src/main/cc/screen-2/CMakeLists.txt from template templates/src/main/cc/SUBDIRECTORY/CMakeLists.txt._
-info: Generated testoutput/src/main/cc/screen-1/CMakeLists.txt from template templates/src/main/cc/SUBDIRECTORY/CMakeLists.txt._
 info: loading extension ./scripts/../templates/extensions/cmake-minimum-required-version-default._
 info: loading extension ./scripts/../templates/extensions/cmake-message-versions._
 info: loading extension ./scripts/../templates/extensions/cmake-message-processor._
@@ -40,10 +32,6 @@ info: sgen is done
 
 exports[`# integration test ## should generate design with merge 1`] = `
 "info: Initializing git repository testoutput/.git
-info: Generated testoutput/src/main/cc/main/CMakeLists.txt from template templates/src/main/cc/SUBDIRECTORY/CMakeLists.txt._
-info: Generated testoutput/src/main/cc/screen-3/CMakeLists.txt from template templates/src/main/cc/SUBDIRECTORY/CMakeLists.txt._
-info: Generated testoutput/src/main/cc/screen-2/CMakeLists.txt from template templates/src/main/cc/SUBDIRECTORY/CMakeLists.txt._
-info: Generated testoutput/src/main/cc/screen-1/CMakeLists.txt from template templates/src/main/cc/SUBDIRECTORY/CMakeLists.txt._
 info: loading extension ./scripts/../templates/extensions/cmake-minimum-required-version-default._
 info: loading extension ./scripts/../templates/extensions/cmake-message-versions._
 info: loading extension ./scripts/../templates/extensions/cmake-message-processor._
@@ -62,10 +50,6 @@ exports[`# integration test ## should generate design with merge 2`] = `
 warn: Ignoring error Error: cannot stash changes - there is nothing to stash.
 info: Attempting to use branch master-sgen-generated
 warn: Checkout branch master-sgen-generated
-info: Generated testoutput/src/main/cc/main/CMakeLists.txt from template templates/src/main/cc/SUBDIRECTORY/CMakeLists.txt._
-info: Generated testoutput/src/main/cc/screen-3/CMakeLists.txt from template templates/src/main/cc/SUBDIRECTORY/CMakeLists.txt._
-info: Generated testoutput/src/main/cc/screen-2/CMakeLists.txt from template templates/src/main/cc/SUBDIRECTORY/CMakeLists.txt._
-info: Generated testoutput/src/main/cc/screen-1/CMakeLists.txt from template templates/src/main/cc/SUBDIRECTORY/CMakeLists.txt._
 info: loading extension ./scripts/../templates/extensions/cmake-minimum-required-version-default._
 info: loading extension ./scripts/../templates/extensions/cmake-message-versions._
 info: loading extension ./scripts/../templates/extensions/cmake-message-processor._

@@ -1,17 +1,5 @@
 {
-<%
-    _.each(design.MasterCell, (cell, key) => {
-        if (cell.external) return;
-        const dirName = lodash.kebabCase(cell.name);
-%>
-    "src/main/cc/<%=dirName%>/CMakeLists.txt" : {
-        "template": "src/main/cc/SUBDIRECTORY/CMakeLists.txt._",
-        "context" : "<%=cell.name%>"
-    },
-<%
-    });
-%>
-    "CMakeLists.txt" : {
-        "template" : "CMakeLists.txt._"
+    "CMakeLists.txt": {
+        "template": "CMakeLists.txt._"
     }
 }
