@@ -1,7 +1,5 @@
 import { execSync } from 'child_process';
 
-
-
 describe('# integration test', () => {
     beforeEach(() => {
         execSync('rm -rf testoutput');
@@ -33,7 +31,7 @@ describe('# integration test', () => {
             './scripts/sgen-cmake.sh -d src/test/fixture/design.js -o testoutput --overwrite=merge'
         ).toString();
         expect(output).toMatchSnapshot();
-        output = execSync('npm install', { cwd: 'testoutput' }).toString();
-        output = execSync('npm run lint', { cwd: 'testoutput' }).toString();
+        output = execSync('cmake CMakeLists.txt', { cwd: 'testoutput' }).toString();
+        output = execSync('make', { cwd: 'testoutput' }).toString();
     });
 });
