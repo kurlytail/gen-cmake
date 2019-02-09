@@ -9,8 +9,9 @@ project(<%=design.MasterDesign[0].name%>)
 <%});%>
 
 <%
-_.each(design.Flow, (flow, key) => {
-    const dirName = lodash.kebabCase(flow.name);
+_.each(design.MasterCell, (cell, key) => {
+    if (cell.external) return;
+    const dirName = lodash.kebabCase(cell.name);
 %>
 add_subdirectory(src/main/cc/<%=dirName%>)
 <%

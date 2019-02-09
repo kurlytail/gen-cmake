@@ -1,11 +1,12 @@
 {
 <%
-    _.each(design.Flow, (flow, key) => {
-        const dirName = lodash.kebabCase(flow.name);
+    _.each(design.MasterCell, (cell, key) => {
+        if (cell.external) return;
+        const dirName = lodash.kebabCase(cell.name);
 %>
     "src/main/cc/<%=dirName%>/CMakeLists.txt" : {
         "template": "src/main/cc/SUBDIRECTORY/CMakeLists.txt._",
-        "context" : "<%=dirName%>"
+        "context" : "<%=cell.name%>"
     },
 <%
     });
