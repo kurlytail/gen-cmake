@@ -34,8 +34,8 @@ pipeline {
 
             steps {
                 sh 'rm -rf *'
-
                 checkout scm
+                tool 'cmake'
 
                 nodejs(nodeJSInstallationName: 'Node') {
                     sh 'npm install --no-save'
