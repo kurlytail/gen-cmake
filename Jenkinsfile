@@ -50,4 +50,10 @@ pipeline {
             }
         }
     }
+
+    post {
+        always {
+            slackSend message: "gen-cmake build ${env.NPM_VERSION_NUMBER} - Status ${currentBuild.result} - ${env.BUILD_URL}"
+        }
+    }
 }
