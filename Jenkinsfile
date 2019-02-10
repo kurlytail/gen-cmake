@@ -37,11 +37,13 @@ pipeline {
                 checkout scm
 
                 nodejs(nodeJSInstallationName: 'Node') {
-                    def cmakePath = tool 'cmake'
-                    env.PATH = env.PATH + ':' + cmakePath
-                    sh 'echo $PATH'
-                    sh 'ls -l ' + cmakePath
-                    sh cmakePath + '/' cmake
+                    script {
+                        def cmakePath = tool 'cmake'
+                        env.PATH = env.PATH + ':' + cmakePath
+                        sh 'echo $PATH'
+                        sh 'ls -l ' + cmakePath
+                        sh cmakePath + '/cmake'
+                    }
                     sh 'npm install --no-save'
                     sh 'npm version $NPM_VERSION_NUMBER'
                     sh 'npm run lint'
