@@ -39,8 +39,7 @@ pipeline {
                 checkout scm
 
                 nodejs(nodeJSInstallationName: 'Node') {
-                    echo env.PATH
-                    sh 'echo $PATH'
+                    sh 'cmake'
                     sh 'npm install --no-save'
                     sh 'npm version $NPM_VERSION_NUMBER'
                     sh 'npm run lint'
