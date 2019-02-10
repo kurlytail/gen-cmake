@@ -32,17 +32,16 @@ pipeline {
                 label 'node-build'
             }
 
-            tools {
-                hudson.plugins.cmake.CmakeTool "cmake"
-            }
-
             steps {
                 sh 'rm -rf *'
                 checkout scm
+
                 nodejs(nodeJSInstallationName: 'Node') {
+                    def cmakePath = tool 'cmake'
+                    env.PATH = env.PATH + ':' + cmakePath
                     sh 'echo $PATH'
-                    sh 'ls -l /var/lib/jenkins/tools/hudson.plugins.cmake.CmakeTool/3.13.4/bin'
-                    sh '/var/lib/jenkins/tools/hudson.plugins.cmake.CmakeTool/3.13.4/bin/cmake'
+                    sh 'ls -l ' + cmakePath
+                    sh cmakePath + '/' cmake
                     sh 'npm install --no-save'
                     sh 'npm version $NPM_VERSION_NUMBER'
                     sh 'npm run lint'
