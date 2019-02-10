@@ -25,9 +25,6 @@ pipeline {
                     currentBuild.displayName = env['NPM_VERSION_NUMBER']
                     def cmakePath = tool 'cmake'
                     env.PATH = env.PATH + ':' + cmakePath
-
-                    echo env.PATH
-                    sh 'ls ' + cmakePath
                 }
             }
         }
@@ -42,6 +39,8 @@ pipeline {
                 checkout scm
 
                 nodejs(nodeJSInstallationName: 'Node') {
+                    echo env.PATH
+                    echo '$PATH'
                     sh 'npm install --no-save'
                     sh 'npm version $NPM_VERSION_NUMBER'
                     sh 'npm run lint'
