@@ -23,6 +23,8 @@ pipeline {
                     loadLibrary()
                     env['NPM_VERSION_NUMBER'] = getNpmVersion 'kurlytail/gen-cmake/master', params.BUILD_VERSION_PREFIX, params.BUILDS_OFFSET
                     currentBuild.displayName = env['NPM_VERSION_NUMBER']
+                    def cmakePath = tool 'cmake'
+                    env.PATH = env.PATH + ':' + cmakePath
                 }
             }
         }
@@ -35,7 +37,6 @@ pipeline {
             steps {
                 sh 'rm -rf *'
                 checkout scm
-                tool 'cmake'
 
                 nodejs(nodeJSInstallationName: 'Node') {
                     sh 'npm install --no-save'
