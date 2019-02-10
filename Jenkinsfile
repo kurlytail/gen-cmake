@@ -40,7 +40,8 @@ pipeline {
 
                 nodejs(nodeJSInstallationName: 'Node') {
                     sh 'echo $PATH'
-                    sh 'cmake'
+                    sh 'ls -l /var/lib/jenkins/tools/hudson.plugins.cmake.CmakeTool/3.13.4/bin'
+                    sh '/var/lib/jenkins/tools/hudson.plugins.cmake.CmakeTool/3.13.4/bin/cmake'
                     sh 'npm install --no-save'
                     sh 'npm version $NPM_VERSION_NUMBER'
                     sh 'npm run lint'
