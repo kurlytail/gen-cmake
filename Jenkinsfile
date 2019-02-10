@@ -33,7 +33,7 @@ pipeline {
             }
 
             tools {
-                hudson.plugins.cmake.CmakeTool 'cmake'
+                hudson.plugins.cmake.CmakeTool
             }
 
             steps {
