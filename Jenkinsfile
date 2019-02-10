@@ -25,6 +25,9 @@ pipeline {
                     currentBuild.displayName = env['NPM_VERSION_NUMBER']
                     def cmakePath = tool 'cmake'
                     env.PATH = env.PATH + ':' + cmakePath
+
+                    echo env.PATH
+                    sh 'ls ' + cmakePath
                 }
             }
         }
