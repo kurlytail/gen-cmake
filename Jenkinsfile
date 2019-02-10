@@ -23,8 +23,6 @@ pipeline {
                     loadLibrary()
                     env['NPM_VERSION_NUMBER'] = getNpmVersion 'kurlytail/gen-cmake/master', params.BUILD_VERSION_PREFIX, params.BUILDS_OFFSET
                     currentBuild.displayName = env['NPM_VERSION_NUMBER']
-                    def cmakePath = tool 'cmake'
-                    env.PATH = env.PATH + ':' + cmakePath
                 }
             }
         }
@@ -37,7 +35,10 @@ pipeline {
             steps {
                 sh 'rm -rf *'
                 checkout scm
-
+                script {
+                    def cmakePath = tool 'cmake'
+                    env.PATH = env.PATH + ':' + cmakePath
+                }
                 nodejs(nodeJSInstallationName: 'Node') {
                     sh 'echo $PATH'
                     sh 'ls -l /var/lib/jenkins/tools/hudson.plugins.cmake.CmakeTool/3.13.4/bin'
