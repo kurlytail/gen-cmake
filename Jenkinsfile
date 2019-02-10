@@ -40,7 +40,7 @@ pipeline {
 
                 nodejs(nodeJSInstallationName: 'Node') {
                     echo env.PATH
-                    echo '$PATH'
+                    sh 'echo $PATH'
                     sh 'npm install --no-save'
                     sh 'npm version $NPM_VERSION_NUMBER'
                     sh 'npm run lint'
