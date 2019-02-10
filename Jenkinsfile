@@ -39,6 +39,7 @@ pipeline {
                 checkout scm
 
                 nodejs(nodeJSInstallationName: 'Node') {
+                    sh 'echo $PATH'
                     sh 'cmake'
                     sh 'npm install --no-save'
                     sh 'npm version $NPM_VERSION_NUMBER'
