@@ -32,13 +32,13 @@ pipeline {
                 label 'node-build'
             }
 
+            tools {
+                cmake 'cmake'
+            }
+
             steps {
                 sh 'rm -rf *'
                 checkout scm
-                script {
-                    def cmakePath = tool 'cmake'
-                    env.PATH = env.PATH + ':' + cmakePath
-                }
                 nodejs(nodeJSInstallationName: 'Node') {
                     sh 'echo $PATH'
                     sh 'ls -l /var/lib/jenkins/tools/hudson.plugins.cmake.CmakeTool/3.13.4/bin'
