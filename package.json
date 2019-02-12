@@ -3,6 +3,7 @@
     "description": "CMAKE project generator",
     "version": "0.0.1",
     "devDependencies": {
+        "@kurlytail/gen-sgen": "0.0.40",
         "babel-cli": "^6.26.0",
         "babel-core": "^6.26.0",
         "babel-eslint": "^8.0.1",
@@ -57,7 +58,7 @@
         "clean": "rimraf ./docs ./dist ./coverage test-report.xml"
     },
     "dependencies": {
-        "@kurlytail/gen-lib": "^0.0.58"
+        "@kurlytail/gen-lib": "^0.0.60"
     },
     "bin": {
         "sgen-cmake": "scripts/sgen-cmake.sh"
