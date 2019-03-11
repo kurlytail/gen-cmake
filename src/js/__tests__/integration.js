@@ -11,25 +11,19 @@ describe('# integration test', () => {
     });
 
     it('## should generate design', () => {
-        const output = execSync('./scripts/sgen-cmake.sh -d src/test/fixture/design.js -o testoutput').toString();
+        const output = execSync('./scripts/sgen-cmake.sh -d src/test/fixture/design.json -o testoutput').toString();
         expect(output).toMatchSnapshot();
     });
 
     it('## should generate design with merge', () => {
-        let output = execSync(
-            './scripts/sgen-cmake.sh -d src/test/fixture/design.js -o testoutput --overwrite=merge'
-        ).toString();
+        let output = execSync('./scripts/sgen-cmake.sh -d src/test/fixture/design.json -o testoutput').toString();
         expect(output).toMatchSnapshot();
-        output = execSync(
-            './scripts/sgen-cmake.sh -d src/test/fixture/design.js -o testoutput --overwrite=merge'
-        ).toString();
+        output = execSync('./scripts/sgen-cmake.sh -d src/test/fixture/design.json -o testoutput').toString();
         expect(output).toMatchSnapshot();
     });
 
     it('## should generate design and run cmake commands', () => {
-        let output = execSync(
-            './scripts/sgen-cmake.sh -d src/test/fixture/design.js -o testoutput --overwrite=merge'
-        ).toString();
+        let output = execSync('./scripts/sgen-cmake.sh -d src/test/fixture/design.json -o testoutput').toString();
         expect(output).toMatchSnapshot();
         output = execSync('cmake CMakeLists.txt', { cwd: 'testoutput' }).toString();
         output = execSync('make', { cwd: 'testoutput' }).toString();

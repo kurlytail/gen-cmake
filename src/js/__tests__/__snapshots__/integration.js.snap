@@ -3,6 +3,7 @@
 exports[`# integration test ## should generate design 1`] = `
 "info: loading map templates/map.json
 info: Initializing git repository testoutput/.git
+info: Generated testoutput/.prettierrc from template templates/.prettierrc._
 info: loading extension templates/extensions/cmake-minimum-required-version-default._
 info: loading extension templates/extensions/cmake-message-versions._
 info: loading extension templates/extensions/cmake-message-processor._
@@ -19,6 +20,7 @@ info: sgen is done
 exports[`# integration test ## should generate design and run cmake commands 1`] = `
 "info: loading map templates/map.json
 info: Initializing git repository testoutput/.git
+info: Generated testoutput/.prettierrc from template templates/.prettierrc._
 info: loading extension templates/extensions/cmake-minimum-required-version-default._
 info: loading extension templates/extensions/cmake-message-versions._
 info: loading extension templates/extensions/cmake-message-processor._
@@ -35,6 +37,7 @@ info: sgen is done
 exports[`# integration test ## should generate design with merge 1`] = `
 "info: loading map templates/map.json
 info: Initializing git repository testoutput/.git
+info: Generated testoutput/.prettierrc from template templates/.prettierrc._
 info: loading extension templates/extensions/cmake-minimum-required-version-default._
 info: loading extension templates/extensions/cmake-message-versions._
 info: loading extension templates/extensions/cmake-message-processor._
@@ -54,6 +57,7 @@ info: Opening git repository testoutput/.git
 warn: Ignoring error Error: cannot stash changes - there is nothing to stash.
 info: Attempting to use branch master-sgen-generated
 warn: Checkout branch master-sgen-generated
+info: Generated testoutput/.prettierrc from template templates/.prettierrc._
 info: loading extension templates/extensions/cmake-minimum-required-version-default._
 info: loading extension templates/extensions/cmake-message-versions._
 info: loading extension templates/extensions/cmake-message-processor._

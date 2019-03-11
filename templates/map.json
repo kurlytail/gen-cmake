@@ -1,4 +1,7 @@
 {
+    ".prettierrc": {
+        "template": ".prettierrc._"
+    },
     "CMakeLists.txt": {
         "template": "CMakeLists.txt._"
     }
