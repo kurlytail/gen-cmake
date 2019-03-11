@@ -3,9 +3,9 @@
 pipeline {
     agent none
 
-    triggers {
-        upstream(upstreamProjects: 'kurlytail/gen-lib/master', threshold: hudson.model.Result.SUCCESS)
-    }
+    //triggers {
+    //    upstream(upstreamProjects: 'kurlytail/gen-lib/master', threshold: hudson.model.Result.SUCCESS)
+    //}
 
     parameters {
         string(defaultValue: "0.0", description: 'Build version prefix', name: 'BUILD_VERSION_PREFIX')
@@ -38,7 +38,7 @@ pipeline {
                 checkout scm
 
                 nodejs(nodeJSInstallationName: 'Node') {
-                    sh 'npm install'
+                    sh 'npm install --no-save'
                     sh 'npm version $NPM_VERSION_NUMBER'
                     sh 'npm run lint'
                     sh 'npm run test'
