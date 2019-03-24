@@ -1,24 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`# integration test ## should generate design 1`] = `
-"info: loading map templates/map.json
-info: Initializing git repository testoutput/.git
-info: Generated testoutput/.prettierrc from template templates/.prettierrc._
-info: loading extension templates/extensions/cmake-minimum-required-version-default._
-info: loading extension templates/extensions/cmake-message-versions._
-info: loading extension templates/extensions/cmake-message-processor._
-info: Generated testoutput/CMakeLists.txt from template templates/CMakeLists.txt._
-info: Committed generated files
-info: Attempting to use branch master-sgen-generated
-info: Creating new branch master-sgen-generated
-warn: Checkout branch master
-warn: Checkout branch master
-info: sgen is done
-"
-`;
-
 exports[`# integration test ## should generate design and run cmake commands 1`] = `
-"info: loading map templates/map.json
+"
+info: loading map templates/map.json
 info: Initializing git repository testoutput/.git
 info: Generated testoutput/.prettierrc from template templates/.prettierrc._
 info: loading extension templates/extensions/cmake-minimum-required-version-default._
@@ -29,42 +13,6 @@ info: Committed generated files
 info: Attempting to use branch master-sgen-generated
 info: Creating new branch master-sgen-generated
 warn: Checkout branch master
-warn: Checkout branch master
-info: sgen is done
-"
-`;
-
-exports[`# integration test ## should generate design with merge 1`] = `
-"info: loading map templates/map.json
-info: Initializing git repository testoutput/.git
-info: Generated testoutput/.prettierrc from template templates/.prettierrc._
-info: loading extension templates/extensions/cmake-minimum-required-version-default._
-info: loading extension templates/extensions/cmake-message-versions._
-info: loading extension templates/extensions/cmake-message-processor._
-info: Generated testoutput/CMakeLists.txt from template templates/CMakeLists.txt._
-info: Committed generated files
-info: Attempting to use branch master-sgen-generated
-info: Creating new branch master-sgen-generated
-warn: Checkout branch master
-warn: Checkout branch master
-info: sgen is done
-"
-`;
-
-exports[`# integration test ## should generate design with merge 2`] = `
-"info: loading map templates/map.json
-info: Opening git repository testoutput/.git
-warn: Ignoring error Error: cannot stash changes - there is nothing to stash.
-info: Attempting to use branch master-sgen-generated
-warn: Checkout branch master-sgen-generated
-info: Generated testoutput/.prettierrc from template templates/.prettierrc._
-info: loading extension templates/extensions/cmake-minimum-required-version-default._
-info: loading extension templates/extensions/cmake-message-versions._
-info: loading extension templates/extensions/cmake-message-processor._
-info: Generated testoutput/CMakeLists.txt from template templates/CMakeLists.txt._
-warn: Checkout branch master-sgen-generated
-warn: Checkout branch master-sgen-generated
-warn: Nothing changed in generated files
 warn: Checkout branch master
 info: sgen is done
 "
@@ -79,8 +27,7 @@ Options:
   -d, --design=ARG+    design files
   -e, --extension=ARG+ extension directories or files
   -o, --output=ARG     output directory for generated files
-      --overwrite=ARG  Overwrite modes, can be one of skip, regen, error                                  (default: error)
-      --forceOverwrite Override overwrite flags in the generator map with the one provided on --overwrite
+  -g, --generator=ARG+ generators to be used
   -h, --help           display this help
 "
 `;
