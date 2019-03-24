@@ -6,24 +6,15 @@ describe('# integration test', () => {
     });
 
     it('## should print help options', () => {
-        const output = execSync('./scripts/sgen-cmake.sh -h').toString();
-        expect(output).toMatchSnapshot();
-    });
-
-    it('## should generate design', () => {
-        const output = execSync('./scripts/sgen-cmake.sh -d src/test/fixture/design.json -o testoutput').toString();
-        expect(output).toMatchSnapshot();
-    });
-
-    it('## should generate design with merge', () => {
-        let output = execSync('./scripts/sgen-cmake.sh -d src/test/fixture/design.json -o testoutput').toString();
-        expect(output).toMatchSnapshot();
-        output = execSync('./scripts/sgen-cmake.sh -d src/test/fixture/design.json -o testoutput').toString();
+        let output = execSync('npm run build').toString();
+        output = execSync('sgen -g `pwd`/dist/cmake.min.js -h').toString();
         expect(output).toMatchSnapshot();
     });
 
     it('## should generate design and run cmake commands', () => {
-        let output = execSync('./scripts/sgen-cmake.sh -d src/test/fixture/design.json -o testoutput').toString();
+        let output = execSync('npm run build').toString();
+        output = execSync('sgen -g `pwd`/dist/cmake.min.js -d src/test/fixture/design.json -o testoutput').toString();
+        output = output.replace(/info: Loaded generator .*cmake.min.js.*/, '');
         expect(output).toMatchSnapshot();
         output = execSync('cmake CMakeLists.txt', { cwd: 'testoutput' }).toString();
         output = execSync('make', { cwd: 'testoutput' }).toString();
