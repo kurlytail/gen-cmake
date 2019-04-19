@@ -20,6 +20,7 @@
     ".flowconfig": { "template": "node_modules/@kurlytail/gen-sgen/templates/.flowconfig._" },
     "webpack.config.js": { "template": "node_modules/@kurlytail/gen-sgen/templates/webpack.config.js._" },
     "src/js/index.js": { "template": "node_modules/@kurlytail/gen-sgen/templates/src/js/index.js._" },
+    "renovate.json": { "template": "node_modules/@kurlytail/gen-sgen/templates/renovate.json._" },
     "logs/map.json": { "template": "node_modules/@kurlytail/gen-log/templates/logs/map.json._" },
     "logs/options.json": { "template": "node_modules/@kurlytail/gen-log/templates/logs/options.json._" }
 }

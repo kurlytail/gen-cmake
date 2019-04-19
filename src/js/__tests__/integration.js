@@ -16,7 +16,7 @@ describe('# integration test', () => {
         output = execSync('sgen -g `pwd`/dist/cmake.min.js -d src/test/fixture/design.json -o testoutput').toString();
         output = output.replace(/info: Loaded generator .*cmake.min.js.*/, '');
         expect(output).toMatchSnapshot();
-        output = execSync('cmake CMakeLists.txt', { cwd: 'testoutput' }).toString();
-        output = execSync('make', { cwd: 'testoutput' }).toString();
+        execSync('cmake CMakeLists.txt', { cwd: 'testoutput', stdio: 'inherit' });
+        execSync('make', { cwd: 'testoutput', stdio: 'inherit' });
     });
 });
