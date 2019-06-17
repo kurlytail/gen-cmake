@@ -14,7 +14,7 @@
         "@kurlytail/gen-log": "1.2.29",
         "@kurlytail/gen-sgen": "1.2.21",
         "babel-core": "7.0.0-bridge.0",
-        "babel-eslint": "10.0.1",
+        "babel-eslint": "10.0.2",
         "babel-jest": "24.7.1",
         "babel-loader": "8.0.5",
         "babel-plugin-module-resolver": "3.2.0",
