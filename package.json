@@ -1,7 +1,7 @@
 {
     "name": "@kurlytail/gen-cmake",
     "description": "CMAKE project generator",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "main": "dist/cmake.min.js",
     "devDependencies": {
         "@babel/cli": "7.4.3",
