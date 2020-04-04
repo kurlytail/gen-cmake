@@ -63,7 +63,7 @@
     },
     "scripts": {
         "docs": "jsdoc -c jsdoc.json && npx opn-cli ./docs/index.html",
-        "gen": "sgen -g sgen -g log -d design.json",
+        "gen": "sgen -g sgen -g log -g bst -d design.json",
         "build": "NODE_ENV=\"debug\" webpack --display-modules --display-reasons",
         "lint": "eslint src",
         "test": "jest tests",
@@ -72,6 +72,10 @@
         "clean": "rimraf ./docs ./dist ./coverage test-report.xml"
     },
     "dependencies": {
-        "@kurlytail/gen-lib": "^1.2.22"
+        "@kurlytail/gen-bst": "1.3.116",
+        "@kurlytail/gen-lib": "1.3.92",
+        "@kurlytail/gen-log": "1.3.135",
+        "@kurlytail/gen-sgen": "1.3.95",
+        "yaml": "1.8.3"
     }
 }
