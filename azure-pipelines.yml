@@ -29,6 +29,8 @@ steps:
     - task: CmdLine@2
       inputs:
           script: |
+              git config --global user.email "ashwinkn@hotmail.com"
+              git config --global user.name "Ashwin Kamath"
               npm install
               npm --no-git-tag-version version patch
               npm run build
